@@ -1,0 +1,346 @@
+.header {
+  width: 1440px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #132739;
+  margin-bottom: 170px;
+}
+
+.header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 266px;
+  background: url(../images/header__bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.header__content {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: radial-gradient(
+    30.02% 35.06% at 67% 56.00000000000001%,
+    rgba(19, 39, 56, 0),
+    rgba(19, 39, 56, 0.96) 100%
+  );
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav__logo-line {
+  width: 1px;
+  height: 38px;
+  border: 1px solid rgb(151, 151, 151);
+  opacity: 0.3;
+}
+
+.nav__logo-btn {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav__list-link {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.list-link__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  border-radius: 3px;
+  padding: 12px 20px;
+  transition: 0.5s;
+}
+
+.list-link__btn:hover {
+  background: rgb(255, 255, 255, 0.1);
+}
+
+.list-link__hover {
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.header__content-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__content-title {
+  color: rgb(92, 240, 213);
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1.4px;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 115px 0 10px 0;
+}
+.header__content-main-title {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: -1.24px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.content-titles__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 0 37px 0;
+}
+
+.content-titles__list-descr {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  opacity: 0.75;
+  /* width: 350px; */
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.list-style {
+  width: 7px;
+  height: 7px;
+  background: rgb(97, 179, 195);
+  border-radius: 50%;
+}
+
+.content-titles__btn {
+  max-width: 320px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgb(60, 200, 174);
+  padding: 18px 25px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.content-titles__btn:hover {
+  box-shadow: 0px 12px 24px 0px rgba(60, 200, 174, 0.5);
+  background: rgb(60, 200, 174);
+}
+
+.content-map__point {
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -45px;
+  left: -33px;
+}
+
+.point__dubai {
+  bottom: -48px;
+  left: -30px;
+}
+
+.point__moscow {
+  flex-direction: row;
+  bottom: 156px;
+  left: -8px;
+}
+
+.map__point-name {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+.map__points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.map__point-big {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: rgb(92, 240, 213);
+  opacity: 0.2;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.map__point-midle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: rgb(92, 240, 213);
+  opacity: 0.3;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.map__point-small {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgb(92, 240, 213);
+  border-radius: 50%;
+}
+
+.content-map__point:hover .map__point-big,
+.content-map__point:hover .map__point-midle,
+.content-map__point:hover .content-map__company {
+  transform: scale(1);
+}
+
+.header__content-map {
+  position: absolute;
+  top: 0;
+}
+.content-map__psevdo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.content-map__plane-newyork {
+  position: absolute;
+  top: -19px;
+  left: -26px;
+}
+
+.content-map__plane-london {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.content-map__plane-berlin {
+  position: absolute;
+  left: 31px;
+  top: 6px;
+}
+
+.content-map__plain-dubai {
+  position: absolute;
+  top: 74px;
+  left: 8px;
+}
+
+.content-map__newyork-moscow {
+  position: absolute;
+  top: 258px;
+  left: 609px;
+}
+
+.content-map__london-moscow {
+  position: absolute;
+  top: 313px;
+  left: 872px;
+}
+.content-map__berlin-moscow {
+  position: absolute;
+  top: 334.5px;
+  left: 981px;
+}
+.content-map__dubai-moscow {
+  position: absolute;
+  top: 334px;
+  left: 1061px;
+}
+
+.content-map__company {
+  position: absolute;
+  top: -52px;
+  left: -32px;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: 0.5s;
+}
+
+.company__london {
+  top: -52px;
+  left: -52px;
+}
+
+.company__berlin {
+  top: -52px;
+  left: -41px;
+}
+
+.amazon__uk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.part-2 {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}

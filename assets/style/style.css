@@ -1,0 +1,30 @@
+@import url(fonts.css);
+@import url(header.css);
+@import url(integrations.css);
+
+* {
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  background-color: #132739;
+}
+
+

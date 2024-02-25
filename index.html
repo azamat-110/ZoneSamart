@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>ZoneSmart</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <div class="container ">
+                <nav class="nav">
+                    <div class="nav__logo">
+                        <a href="" class="nav__logo-img">
+                            <svg width="113" height="19" viewBox="0 0 113 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.90625 14.8359H14.0625V18H0.773438V15.832L8.90625 4.11328H0.726562V0.9375H13.9805V3.04688L5.90625 14.8359ZM14.2889 11.543C14.2889 10.2773 14.535 9.15234 15.0272 8.16797C15.5194 7.17578 16.2264 6.41406 17.1483 5.88281C18.0701 5.35156 19.1522 5.08594 20.3944 5.08594C22.2928 5.08594 23.7889 5.67578 24.8826 6.85547C25.9764 8.02734 26.5233 9.625 26.5233 11.6484V11.7891C26.5233 13.7656 25.9725 15.3359 24.8709 16.5C23.7772 17.6562 22.2928 18.2344 20.4178 18.2344C18.6131 18.2344 17.1639 17.6953 16.0701 16.6172C14.9764 15.5312 14.3865 14.0625 14.3006 12.2109L14.2889 11.543ZM18.2381 11.7891C18.2381 12.9609 18.4217 13.8203 18.7889 14.3672C19.1561 14.9141 19.699 15.1875 20.4178 15.1875C21.824 15.1875 22.5428 14.1055 22.574 11.9414V11.543C22.574 9.26953 21.8475 8.13281 20.3944 8.13281C19.074 8.13281 18.3592 9.11328 18.2498 11.0742L18.2381 11.7891ZM31.1793 5.32031L31.3082 6.80859C32.1832 5.66016 33.3903 5.08594 34.9293 5.08594C36.2497 5.08594 37.234 5.48047 37.8825 6.26953C38.5387 7.05859 38.8786 8.24609 38.902 9.83203V18H34.9411V9.99609C34.9411 9.35547 34.8122 8.88672 34.5543 8.58984C34.2965 8.28516 33.8278 8.13281 33.1481 8.13281C32.3747 8.13281 31.8004 8.4375 31.4254 9.04688V18H27.4762V5.32031H31.1793ZM46.5229 18.2344C44.5776 18.2344 43.0034 17.6562 41.8003 16.5C40.5971 15.3359 39.9956 13.8242 39.9956 11.9648V11.6367C39.9956 10.3398 40.2339 9.19531 40.7104 8.20312C41.1948 7.21094 41.8979 6.44531 42.8198 5.90625C43.7417 5.35938 44.8354 5.08594 46.101 5.08594C47.8823 5.08594 49.2885 5.64062 50.3198 6.75C51.351 7.85156 51.8667 9.39062 51.8667 11.3672V12.9023H44.0151C44.1557 13.6133 44.4643 14.1719 44.9409 14.5781C45.4174 14.9844 46.0346 15.1875 46.7924 15.1875C48.0424 15.1875 49.019 14.75 49.7221 13.875L51.5268 16.0078C51.0346 16.6875 50.3354 17.2305 49.4292 17.6367C48.5307 18.0352 47.562 18.2344 46.5229 18.2344ZM46.0776 8.13281C44.9214 8.13281 44.2339 8.89844 44.0151 10.4297H47.9995V10.125C48.0151 9.49219 47.8549 9.00391 47.519 8.66016C47.1831 8.30859 46.7026 8.13281 46.0776 8.13281Z"
+                                    fill="#3CC8AE" />
+                                <path
+                                    d="M59.3938 14.4375C59.3938 14.1016 59.2181 13.832 58.8665 13.6289C58.5149 13.4258 57.847 13.2148 56.8626 12.9961C55.8782 12.7773 55.0657 12.4922 54.4251 12.1406C53.7845 11.7812 53.2962 11.3477 52.9602 10.8398C52.6243 10.332 52.4563 9.75 52.4563 9.09375C52.4563 7.92969 52.9368 6.97266 53.8977 6.22266C54.8587 5.46484 56.1165 5.08594 57.6712 5.08594C59.3431 5.08594 60.6868 5.46484 61.7024 6.22266C62.7181 6.98047 63.2259 7.97656 63.2259 9.21094H59.2649C59.2649 8.19531 58.7298 7.6875 57.6595 7.6875C57.2454 7.6875 56.8977 7.80469 56.6165 8.03906C56.3352 8.26562 56.1946 8.55078 56.1946 8.89453C56.1946 9.24609 56.3665 9.53125 56.7102 9.75C57.054 9.96875 57.6009 10.1484 58.3509 10.2891C59.1087 10.4297 59.7727 10.5977 60.3431 10.793C62.2493 11.4492 63.2024 12.625 63.2024 14.3203C63.2024 15.4766 62.6868 16.418 61.6556 17.1445C60.6321 17.8711 59.304 18.2344 57.6712 18.2344C56.5852 18.2344 55.6165 18.0391 54.7649 17.6484C53.9134 17.2578 53.2493 16.7266 52.7727 16.0547C52.2962 15.3828 52.0579 14.6758 52.0579 13.9336H55.7493C55.7649 14.5195 55.9602 14.9492 56.3352 15.2227C56.7102 15.4883 57.1907 15.6211 57.7766 15.6211C58.3157 15.6211 58.7181 15.5117 58.9837 15.293C59.2571 15.0742 59.3938 14.7891 59.3938 14.4375ZM68.0812 5.32031L68.2101 6.80859C69.1085 5.66016 70.3155 5.08594 71.8312 5.08594C73.4327 5.08594 74.5148 5.72266 75.0773 6.99609C75.9366 5.72266 77.1788 5.08594 78.8038 5.08594C81.3741 5.08594 82.6944 6.64062 82.7648 9.75V18H78.8038V9.99609C78.8038 9.34766 78.6944 8.875 78.4757 8.57812C78.2569 8.28125 77.8585 8.13281 77.2804 8.13281C76.4991 8.13281 75.9171 8.48047 75.5343 9.17578L75.546 9.33984V18H71.5851V10.0195C71.5851 9.35547 71.4796 8.875 71.2687 8.57812C71.0577 8.28125 70.6554 8.13281 70.0616 8.13281C69.3038 8.13281 68.7257 8.48047 68.3273 9.17578V18H64.378V5.32031H68.0812ZM91.4521 18C91.3115 17.7422 91.1865 17.3633 91.0771 16.8633C90.3505 17.7773 89.3349 18.2344 88.0302 18.2344C86.8349 18.2344 85.8193 17.875 84.9833 17.1562C84.1474 16.4297 83.7294 15.5195 83.7294 14.4258C83.7294 13.0508 84.2372 12.0117 85.2529 11.3086C86.2685 10.6055 87.745 10.2539 89.6825 10.2539H90.9013V9.58594C90.9013 8.42188 90.3974 7.83984 89.3896 7.83984C88.4521 7.83984 87.9833 8.30078 87.9833 9.22266H84.0341C84.0341 7.99609 84.5536 7 85.5927 6.23438C86.6396 5.46875 87.9716 5.08594 89.5888 5.08594C91.206 5.08594 92.4833 5.48047 93.4208 6.26953C94.3583 7.05859 94.8388 8.14062 94.8622 9.51562V15.1289C94.8779 16.293 95.0575 17.1836 95.4013 17.8008V18H91.4521ZM88.9794 15.4219C89.4716 15.4219 89.8779 15.3164 90.1982 15.1055C90.5263 14.8945 90.7607 14.6562 90.9013 14.3906V12.3633H89.7529C88.3779 12.3633 87.6904 12.9805 87.6904 14.2148C87.6904 14.5742 87.8115 14.8672 88.0536 15.0938C88.2958 15.3125 88.6044 15.4219 88.9794 15.4219ZM104.018 8.89453L102.718 8.80078C101.475 8.80078 100.678 9.19141 100.327 9.97266V18H96.3777V5.32031H100.081L100.21 6.94922C100.874 5.70703 101.8 5.08594 102.987 5.08594C103.409 5.08594 103.776 5.13281 104.089 5.22656L104.018 8.89453ZM109.917 2.16797V5.32031H112.003V8.0625H109.917V13.8633C109.917 14.3398 110.003 14.6719 110.174 14.8594C110.346 15.0469 110.686 15.1406 111.194 15.1406C111.585 15.1406 111.913 15.1172 112.178 15.0703V17.8945C111.467 18.1211 110.725 18.2344 109.952 18.2344C108.592 18.2344 107.588 17.9141 106.94 17.2734C106.292 16.6328 105.967 15.6602 105.967 14.3555V8.0625H104.35V5.32031H105.967V2.16797H109.917Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <div class="nav__logo-line"></div>
+                        <p class="nav__logo-btn">
+                            Экспортная платформа
+                        </p>
+                    </div>
+                    <ul class="nav__list">
+                        <li>
+                            <a href="" class="nav__list-link">
+                                О компании
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list-link list-link__hover">
+                                Наши решения
+                                <svg width="8.000000" height="4.000000" viewBox="0 0 8 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs />
+                                    <g opacity="0.500000">
+                                        <path id="Triangle" d="M4 4L0 0L8 0L4 4Z" fill="#FFFFFF" fill-opacity="1.000000"
+                                            fill-rule="evenodd" />
+                                        <path id="Triangle" d="M0 0L8 0L4 4L0 0Z" stroke="#979797" stroke-opacity="0"
+                                            stroke-width="0.000000" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list-link list-link__hover">
+                                База знаний
+                                <svg width="8.000000" height="4.000000" viewBox="0 0 8 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs />
+                                    <g opacity="0.500000">
+                                        <path id="Triangle" d="M4 4L0 0L8 0L4 4Z" fill="#FFFFFF" fill-opacity="1.000000"
+                                            fill-rule="evenodd" />
+                                        <path id="Triangle" d="M0 0L8 0L4 4L0 0Z" stroke="#979797" stroke-opacity="0"
+                                            stroke-width="0.000000" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list-link">
+                                Блог
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list-link">
+                                Тарифы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="list-link__btn">
+                                <div class="btn__user">
+                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M17 19V17C17 14.7909 15.2091 13 13 13H5C2.79086 13 1 14.7909 1 17V19H17Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9 9C11.2091 9 13 7.20914 13 5C13 2.79086 11.2091 1 9 1C6.79086 1 5 2.79086 5 5C5 7.20914 6.79086 9 9 9Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p class="nav__list-link">
+                                    Личный кабинет
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__content-titles">
+                    <h1 class="header__content-title">
+                        ZoneSmart. Экспорт В один клик.
+                    </h1>
+                    <h2 class="header__content-main-title">
+                        Откройте для себя крупнейшие
+                        мировые онлайн-площадки.
+                        Впервые в России.
+                    </h2>
+                    <ul class="content-titles__list">
+                        <li>
+                            <div class="content-titles__list-descr">
+                                <div class="list-style"></div>
+                                Синхронизация номенклатуры и заказов
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content-titles__list-descr">
+                                <div class="list-style"></div>
+                                Автоматизация логистики
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content-titles__list-descr">
+                                <div class="list-style"></div>
+                                Профессиональное продвижение<br>
+                                и сопровождение продаж
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="content-titles__btn">
+                        Попробовать бесплатно 14 дней
+                    </a>
+                </div>
+
+                <div class="header__content-map">
+                    <div class="content-map__newyork-moscow">
+                        <svg width="468" height="178" viewBox="0 0 468 178" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3"
+                                d="M467 78.0852C420.4 27.2658 360.094 3.91638 280.6 1.16939C236.423 -0.3572 169.582 8.01102 114.759 43.6314C59.9353 79.2519 36.0638 129.709 1 177"
+                                stroke="#3CC8AE" stroke-width="1.5" />
+                        </svg>
+                        <div class="content-map__psevdo">
+                            <svg width="188" height="78" viewBox="0 0 188 78" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M187 77C140.5 26.7857 80.3235 3.71429 1 1" stroke="#3CC8AE"
+                                    stroke-width="1.5" />
+                            </svg>
+                            <div class="content-map__plane-newyork">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.99244 20.0004C1.99315 21.3712 6.05223 22.7589 7.8781 22.7581L12.598 22.7578L21.0417 34.8206C21.1058 34.9129 21.2114 34.9684 21.324 34.9684L23.2734 34.9675C23.3845 34.9675 23.4892 34.9143 23.5542 34.8244C23.6191 34.7345 23.6371 34.6195 23.6019 34.514L19.5903 22.4775L27.3372 21.527L29.8174 25.0707C29.8839 25.1622 29.9871 25.2185 30.0997 25.2185L31.5619 25.2184C31.6698 25.2184 31.7738 25.1676 31.8388 25.0808C31.9037 24.9908 31.9248 24.879 31.8919 24.7758L30.7474 20.9599L32.6468 20.3272C32.7875 20.2803 32.8821 20.1481 32.8814 20.0003C32.8806 19.9057 32.8423 19.8205 32.779 19.7571C32.7422 19.7204 32.6969 19.6907 32.6452 19.6735L30.7459 19.041L31.8909 15.2249C31.9214 15.1209 31.9019 15.0076 31.8385 14.9192C31.8284 14.9059 31.8174 14.895 31.8049 14.8824C31.7408 14.8183 31.6548 14.7808 31.5617 14.78L30.0987 14.7809C29.9861 14.7809 29.8813 14.8356 29.8172 14.9263L27.335 18.4719L19.5882 17.5222L23.6011 5.48531C23.6363 5.37975 23.6175 5.26402 23.5534 5.17488C23.5425 5.15924 23.5307 5.14595 23.5159 5.13109C23.4518 5.06697 23.3665 5.03179 23.2735 5.03101L21.3225 5.03034C21.2115 5.03191 21.1051 5.08508 21.0402 5.17814L12.5952 17.2419L7.87527 17.2421C6.0494 17.2414 1.99252 18.6289 1.99244 20.0004Z"
+                                        fill="#5CF0D5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content-map__point " style="bottom:-41px;">
+                            <div class="map__points">
+                                <div class="map__point-small"></div>
+                                <div class="map__point-midle"></div>
+                                <div class="map__point-big"></div>
+                                <div class="content-map__company ">
+                                    <img src="./assets/images/amazon_logo.svg" alt="amazon" srcset="">
+                                </div>
+                            </div>
+                            <div class="map__point-name">
+                                new york
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-map__london-moscow">
+                        <svg width="205" height="31" viewBox="0 0 205 31" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3"
+                                d="M1 30C1 30 39.5835 11.0654 57 6.8615C97.2747 -2.85978 130.336 1.26451 154.835 6.66342C171.094 10.2463 187.482 15.6778 204 22.9578"
+                                stroke="#3CC8AE" stroke-width="1.5" />
+                        </svg>
+                        <div class="content-map__psevdo">
+                            <svg width="127" height="24" viewBox="0 0 127 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 2.81873C31.5246 -1.29864 57.1047 2.26321 77.0115 6.6743C93.2115 10.264 109.541 15.7059 126 23"
+                                    stroke="#3CC8AE" stroke-width="1.5" />
+                            </svg>
+                            <div class="content-map__plane-london">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.95752 25.6514C4.15995 27.0859 8.61215 27.9414 10.5229 27.672L15.4624 26.9778L26.0741 38.3605C26.1548 38.4477 26.2734 38.4902 26.3913 38.4737L28.4313 38.1861C28.5475 38.1698 28.6493 38.0987 28.704 37.9951C28.7587 37.8914 28.7606 37.7685 28.7083 37.6632L22.739 25.6564L30.7066 23.5227L33.8237 26.8667C33.9067 26.9526 34.023 26.9964 34.1408 26.9798L35.6711 26.7647C35.7841 26.7489 35.8854 26.6804 35.9406 26.58C35.9953 26.4763 36.0009 26.3562 35.9514 26.253L34.1921 22.4278L36.0868 21.4864C36.2272 21.4166 36.3068 21.2644 36.2842 21.1099C36.2695 21.011 36.2168 20.9274 36.1412 20.8704C36.0974 20.8374 36.0455 20.8129 35.989 20.8025L33.9082 20.4198L34.545 16.2579C34.5616 16.1446 34.5245 16.0288 34.4452 15.9457C34.4326 15.9332 34.4195 15.9234 34.4046 15.9121C34.3281 15.8545 34.2325 15.8278 34.135 15.8407L32.604 16.0567C32.4862 16.0733 32.3846 16.146 32.3308 16.2503L30.2548 20.3258L22.0077 20.4709L24.4363 7.2839C24.4576 7.16825 24.4209 7.0499 24.3407 6.96604C24.3269 6.95128 24.3127 6.93909 24.295 6.92573C24.2184 6.86805 24.124 6.84377 24.0265 6.85663L21.9846 7.14277C21.8687 7.16074 21.7652 7.23203 21.711 7.33896L14.6479 21.2057L9.70832 21.8999C7.79735 22.1676 3.75579 24.216 3.95752 25.6514Z"
+                                        fill="#5CF0D5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content-map__point">
+                            <div class="map__points">
+                                <div class="map__point-small"></div>
+                                <div class="map__point-midle"></div>
+                                <div class="map__point-big"></div>
+                                <div class="content-map__company company__london ">
+                                    <div class="amazon__uk">
+                                        <img src="./assets/images/amazon_uk-1.svg" alt="amazon" srcset="">
+                                        <img class="part-2" src="./assets/images/amazon_uk-2.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map__point-name">
+                                london
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-map__berlin-moscow">
+                        <svg width="96" height="34" viewBox="0 0 96 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3"
+                                d="M1 32.9203C1 32.9203 38.3793 33.4676 52.4956 30.2563C73.2623 25.5322 87.4304 15.7801 95 1"
+                                stroke="#3CC8AE" stroke-width="1.5" />
+                            <path d="M52.4956 30.2563C73.2623 25.5322 87.4304 15.7801 95 1" stroke="#3CC8AE"
+                                stroke-width="1.5" />
+                        </svg>
+                        <div class="content-map__plane-berlin">
+                            <svg width="46" height="45" viewBox="0 0 46 45" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.26138 26.8013C4.58807 28.2127 9.09789 28.6769 10.9779 28.2421L15.8381 27.12L27.4015 37.5345C27.4894 37.6142 27.6113 37.6463 27.7273 37.6196L29.7345 37.1553C29.8488 37.1289 29.9441 37.0492 29.9895 36.9412C30.035 36.8332 30.0262 36.7105 29.9649 36.6102L22.9718 25.1694L30.7232 22.3494L34.1198 25.4089C34.21 25.4874 34.3297 25.5208 34.4456 25.494L35.9514 25.1464C36.0625 25.1207 36.1575 25.0437 36.2037 24.9389C36.2491 24.8308 36.2443 24.7107 36.1859 24.6122L34.0999 20.9549L35.9054 19.8519C36.0392 19.7702 36.1052 19.6116 36.0692 19.4596C36.0459 19.3624 35.9862 19.2837 35.906 19.2335C35.8594 19.2044 35.8056 19.1846 35.7484 19.1792L33.6421 18.9793L33.9138 14.7777C33.9204 14.6634 33.8734 14.5513 33.7871 14.4753C33.7735 14.464 33.7596 14.4554 33.7438 14.4455C33.6625 14.3947 33.565 14.3765 33.469 14.3978L31.9626 14.7464C31.8467 14.7732 31.7518 14.8545 31.7073 14.9631L29.9944 19.204L21.7913 20.0673L23.0614 6.71887C23.0725 6.6018 23.0257 6.48709 22.9384 6.41054C22.9235 6.39704 22.9082 6.38614 22.8894 6.37437C22.8081 6.32359 22.712 6.30762 22.616 6.32893L20.6068 6.79194C20.4928 6.81995 20.3959 6.89999 20.3512 7.01123L14.5236 21.4408L9.66333 22.5628C7.78297 22.9961 3.93532 25.389 4.26138 26.8013Z"
+                                    fill="#5CF0D5" />
+                            </svg>
+                        </div>
+                        <div class="content-map__point">
+                            <div class="map__points">
+                                <div class="map__point-small"></div>
+                                <div class="map__point-midle"></div>
+                                <div class="map__point-big"></div>
+                                <div class="content-map__company company__berlin">
+                                    <div class="amazon__uk">
+                                        <img src="./assets/images/amazon_berlin-1.svg" alt="">
+                                        <img class="part-2" src="./assets/images/amazon_berlin-2.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map__point-name">
+                                berlin
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-map__dubai-moscow">
+                        <svg width="44" height="176" viewBox="0 0 44 176" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3"
+                                d="M13.6996 1C13.6996 1 47.5651 64.0236 42.2887 99.7776C37.0124 135.532 26.4606 153.941 1 175"
+                                stroke="#3CC8AE" stroke-width="1.5" />
+                        </svg>
+                        <div class="content-map__psevdo">
+                            <svg width="30" height="100" viewBox="0 0 30 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1C1 1 33.3625 63.5275 28.3203 99" stroke="#3CC8AE" stroke-width="1.5" />
+                            </svg>
+                            <div class="content-map__plain-dubai">
+                                <svg width="42" height="41" viewBox="0 0 42 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.3776 38.9322C18.7761 39.178 20.922 35.287 21.2496 33.4244L22.0986 28.6097L35.9228 22.1656C36.0285 22.1168 36.1041 22.0191 36.1243 21.9043L36.4742 19.9156C36.4942 19.8023 36.4588 19.6859 36.3787 19.6035C36.2986 19.5211 36.1846 19.4821 36.0706 19.499L23.0707 21.4268L23.4949 13.3535L27.556 11.4608C27.6613 11.4094 27.7373 11.3143 27.7576 11.1994L28.0206 9.7078C28.04 9.59772 28.0068 9.48249 27.93 9.40068C27.8499 9.3183 27.7396 9.27665 27.6284 9.29158L23.53 9.77299L23.2263 7.7217C23.2038 7.56968 23.086 7.4494 22.9351 7.42362C22.8384 7.40739 22.7446 7.43115 22.6686 7.48437C22.6245 7.51524 22.586 7.55617 22.5592 7.60572L21.5723 9.42943L17.8856 7.57531C17.785 7.52549 17.6658 7.52504 17.5643 7.57376C17.5489 7.58173 17.5358 7.59093 17.5208 7.60144C17.4438 7.65532 17.3901 7.73631 17.3725 7.83109L17.1102 9.32364C17.0899 9.4385 17.1269 9.55523 17.2079 9.63696L20.3781 12.8064L18.0155 20.5379L6.4589 14.2801C6.35755 14.2252 6.23612 14.2236 6.13365 14.2729C6.11573 14.2813 6.10006 14.2909 6.08223 14.3034C6.00529 14.3572 5.95407 14.4378 5.93653 14.5326L5.58482 16.5226C5.56644 16.6362 5.60155 16.7542 5.6848 16.8372L16.4713 27.6208L15.6224 32.4354C15.2932 34.2978 15.9785 38.6856 17.3776 38.9322Z"
+                                        fill="#5CF0D5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content-map__point point__dubai">
+                            <div class="map__points">
+                                <div class="map__point-small"></div>
+                                <div class="map__point-midle"></div>
+                                <div class="map__point-big"></div>
+                                <div class="content-map__company ">
+                                    <img src="./assets/images/amazon_logo.svg" alt="amazon" srcset="">
+                                </div>
+                            </div>
+                            <div class="map__point-name">
+                                dubai
+                            </div>
+                        </div>
+                        <div class="content-map__point point__moscow">
+                            <div class="map__points">
+                                <div class="map__point-small"></div>
+                                <div class="map__point-midle"></div>
+                                <div class="map__point-big"></div>
+                                <div class="content-map__company ">
+                                    <img src="./assets/images/amazon_logo.svg" alt="amazon" srcset="">
+                                </div>
+                            </div>
+                            <div class="map__point-name">
+                                moscow
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="main">
+        <section class="integrations">
+            <div class=" integrations__content">
+                <div class="container">
+                    <div class="integration__title">
+                        <h2 class="integration__content-title">
+                            Доступные интеграции
+                        </h2>
+                        <div class="card__controller">
+                            <a href="##" class="card__controller-btn-left">
+                                <div class="controller-btn">
+                                    <img style="transform: rotate(180deg);" src="./assets/images/arrow-right.svg"
+                                        alt="arrow-right">
+                                </div>
+                            </a>
+                            <a href="##" class="card__controller-btn-right">
+                                <div class="controller-btn">
+                                    <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="integrations__cards">
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/amazon_word.svg" alt="amazon">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Amazon
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Маркетплейсы
+                            </h3>
+                            <p class="card-descr">
+                                Амазон — крупнейший маркетплейс
+                                в мире родом из США
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/ebay.svg" alt="ebay">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Ebay
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Маркетплейсы
+                            </h3>
+                            <p class="card-descr">
+                                Ebay - cамый популярный интернет-аукцион в мире,
+                                работающий с 1995 года.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/etsy.svg" alt="etsy">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Etsy
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Маркетплейсы
+                            </h3>
+                            <p class="card-descr">
+                                Etsy - международная торговая площадка, специализирующаяся на продаже уникальных
+                                изделий.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/Yandex-market.svg" alt="yandex-market">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Яндекс.Маркет
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Маркетплейсы
+                            </h3>
+                            <p class="card-descr">
+                                Старейший российский маркетплейс потребительских товаров
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/avito.svg" alt="avito">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Avito
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Маркетплейсы
+                            </h3>
+                            <p class="card-descr">
+                                Avito - самый популярный в России онлайн-сервис для продажи товаров, насчитывающий более
+                                50 млн активных объявлений.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/Russian_Post.svg" alt="Russian_Post">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img logistic__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Почта России
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Логистические интеграции
+                            </h3>
+                            <p class="card-descr">
+                                Интеграция с сервисами Почты России для международной интернет-торговли.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/DHL_Logo.svg" alt="DHL_Logo">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img logistic__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                DHL
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Логистические интеграции
+                            </h3>
+                            <p class="card-descr">
+                                Модуль позволяет создать интеграцию с DHL, осуществляющей доставку грузов по всему миру.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/shiptor.svg" alt="avito">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img logistic__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Shiptor
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                Логистические интеграции
+                            </h3>
+                            <p class="card-descr">
+                                Модуль позволяет сделать интеграцию со службой доставки Shiptor.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/Bitrix24-logo-ru.svg" alt="Bitrix24-logo-ru">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img modules__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Битрикс-24
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                CRM / CMS
+                            </h3>
+                            <p class="card-descr">
+                                Битрикс24 — российский сервис для управления бизнесом.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/1c_bitrix_logo.svg" alt="1c_bitrix_logo">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img modules__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                1С-Битрикс
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                CRM / CMS
+                            </h3>
+                            <p class="card-descr">
+                                1С-Битрикс — российский сервис для управления бизнесом.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/retail.svg" alt="retail">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img modules__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                Retail-CRM
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                CRM / CMS
+                            </h3>
+                            <p class="card-descr">
+                                Retail-CRM — сервис для управления бизнесом.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+                    <div class="integration__card">
+                        <div class="card__basket">
+                            <img src="./assets/images/inSales.svg" alt="inSale">
+                            <div class="basket__btn-circle">
+                                <div class="btn-circle__img modules__card"></div>
+                            </div>
+                        </div>
+                        <div class="integration__card-descr">
+                            <h2 class="card-descr__title">
+                                InSales
+                            </h2>
+                            <h3 class="card-descr__subtitle">
+                                CRM / CMS
+                            </h3>
+                            <p class="card-descr">
+                                InSales — сервис для управления бизнесом.
+                            </p>
+                        </div>
+                        <a href="" class="more-btn">
+                            <p class="more-btn__title">
+                                Подробнее
+                            </p>
+                            <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./script/cards.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

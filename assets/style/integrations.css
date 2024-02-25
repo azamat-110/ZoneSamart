@@ -1,0 +1,214 @@
+.integrations {
+  padding: 50px;
+  margin-top: -250px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.integrations__cards {
+  display: flex;
+  width: max-content;
+  gap: 32px;
+  /* margin-left: -100px; */
+  transition: 0.5s;
+}
+
+.integration__content-title {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -1px;
+  text-align: left;
+  padding: 30px 0;
+}
+
+.integration__card {
+  max-width: 320px;
+  padding: 30px;
+  border-radius: 6px;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 105px;
+  z-index: 9;
+  transition: 0.5s;
+}
+
+.integration__card::-webkit-scrollbar {
+  width: 0;
+}
+
+.card__basket {
+  display: flex;
+  align-items: center;
+  height: 62px;
+  transition: 0.5s;
+
+  justify-content: space-between;
+}
+
+.basket-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basket-bg__hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -25px;
+  top: -12px;
+}
+
+.card-basket__hover {
+  position: absolute;
+  top: 25px;
+  left: 44px;
+}
+
+.integration__card-basket {
+  position: absolute;
+}
+
+.card-descr__title {
+  color: rgb(21, 39, 57);
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.card-descr__subtitle {
+  color: rgb(55, 188, 163);
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 10px 0 16px 0;
+}
+
+.card-descr {
+  max-width: 240px;
+  color: rgb(0, 0, 0);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  opacity: 0.7;
+}
+
+.more-btn {
+  max-width: max-content;
+  border-radius: 6px;
+  box-shadow: 0px 4px 64px 0px rgba(48, 56, 64, 0.16);
+  background: rgb(60, 200, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -22.5px;
+  transform: scale(0);
+  transition: 0.5s;
+  /* transform-origin: bottom; */
+}
+
+.more-btn__title {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.integration__card:hover .more-btn {
+  transform: scale(1);
+}
+
+.basket__btn-circle {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(
+    180deg,
+    rgb(247, 248, 250),
+    rgb(237, 241, 245) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.btn-circle__img {
+  width: 32px;
+  height: 32px;
+  background: url(../images/basket.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.integration__card:hover .basket__btn-circle {
+  box-shadow: 0px 22px 34px 0px rgba(60, 200, 174, 0.5);
+  background: rgb(60, 200, 174);
+}
+
+.integration__card:hover .btn-circle__img {
+  background: url(../images/basket-hover.svg);
+}
+
+.integration__card:hover {
+  box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.771);
+}
+.integration__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controller-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.card__controller {
+  display: flex;
+  gap: 12px;
+}
+
+.logistic__card {
+  background: url(../images/logistic.svg);
+}
+
+.integration__card:hover .logistic__card {
+  background: url(../images/logistic_hover.svg);
+}
+
+.modules__card {
+  background: url(../images/modules.svg);
+}
+
+.integration__card:hover .modules__card {
+    background: url(../images/modules_hover.svg);
+  }
