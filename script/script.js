@@ -23,6 +23,66 @@ cardControllerRight.addEventListener('click', () => {
 });
 
 
+let cardsContainer = document.querySelector('.integrations__cards')
+
+console.log('integration', integration);
+
+integration.forEach(({ descr, logo, name, type, isLogistic, isModule }) => {
+    cardsContainer.innerHTML += `<div class="integration__card ">
+    <div class="card__basket">
+    <img src="${logo}" alt="amazon">
+    <div class="basket__btn-circle">
+        <div class="btn-circle__img ${isLogistic ? 'logistic__card' : isModule ? 'modules__card' : ''}"></div>
+    </div>
+    </div>
+    <div class="integration__card-descr">
+    <h2 class="card-descr__title">
+        ${name}
+    </h2>
+    <h3 class="card-descr__subtitle">
+        ${type}
+    </h3>
+    <p class="card-descr">
+        ${descr}
+    </p>
+    </div>
+    <a href="" class="more-btn">
+    <p class="more-btn__title">
+        Подробнее
+    </p>
+    <img src="./assets/images/arrow-right.svg" alt="arrow-right">
+    </a>
+    </div>`
+})
+
+
+/*<div class="integration__card">
+<div class="card__basket">
+<img src="./assets/images/amazon_word.svg" alt="amazon">
+<div class="basket__btn-circle">
+    <div class="btn-circle__img"></div>
+</div>
+</div>
+<div class="integration__card-descr">
+<h2 class="card-descr__title">
+    Amazon
+</h2>
+<h3 class="card-descr__subtitle">
+    Маркетплейсы
+</h3>
+<p class="card-descr">
+    Амазон — крупнейший маркетплейс
+    в мире родом из США
+</p>
+</div>
+<a href="" class="more-btn">
+<p class="more-btn__title">
+    Подробнее
+</p>
+<img src="./assets/images/arrow-right.svg" alt="arrow-right">
+</a>
+</div>*/
+
 
 
 
