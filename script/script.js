@@ -3,23 +3,23 @@ const cardControllerLeft = document.querySelector('.card__controller-btn-left'),
     cardControllerRight = document.querySelector('.card__controller-btn-right'),
     integrationsCards = document.querySelector('.integrations__cards');
 
-let distance = 0;
+let movingDistance = 0;
 const cardWidth = 330;
 
 cardControllerLeft.addEventListener('click', () => {
-    distance += cardWidth;
-    if (distance > cardWidth || distance <= -cardWidth * 12) {
-        distance = 0;
+    movingDistance += cardWidth;
+    if (movingDistance > cardWidth || movingDistance <= -cardWidth * 12) {
+        movingDistance = 0;
     }
-    integrationsCards.style = `transform: translateX(${distance}px);`;
+    integrationsCards.style = `transform: translateX(${movingDistance}px);`;
 });
 
 cardControllerRight.addEventListener('click', () => {
-    distance -= cardWidth;
-    if (distance >= cardWidth * 4 || distance < -cardWidth * 9) {
-        distance = -cardWidth * 8;
+    movingDistance -= cardWidth;
+    if (movingDistance >= cardWidth * 4 || movingDistance < -cardWidth * 9) {
+        movingDistance = -cardWidth * 8;
     }
-    integrationsCards.style = `transform: translateX(${distance}px);`;
+    integrationsCards.style = `transform: translateX(${movingDistance}px);`;
 });
 
 

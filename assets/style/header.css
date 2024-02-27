@@ -252,9 +252,9 @@
   border-radius: 50%;
 }
 
-.content-map__point:hover .map__point-big,
-.content-map__point:hover .map__point-midle,
-.content-map__point:hover .content-map__company {
+.map__points:hover .map__point-big,
+.map__points:hover .map__point-midle,
+.map__points:hover .content-map__company {
   transform: scale(1);
 }
 
