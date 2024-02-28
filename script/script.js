@@ -25,7 +25,6 @@ cardControllerRight.addEventListener('click', () => {
 
 let cardsContainer = document.querySelector('.integrations__cards')
 
-console.log('integration', integration);
 
 integration.forEach(({ descr, logo, name, type, isLogistic, isModule }) => {
     cardsContainer.innerHTML += `<div class="integration__card ">
@@ -53,7 +52,37 @@ integration.forEach(({ descr, logo, name, type, isLogistic, isModule }) => {
     <img src="./assets/images/arrow-right.svg" alt="arrow-right">
     </a>
     </div>`
-})
+});
+
+const graphicTab = document.querySelectorAll('.graphic__tab');
+const graphicTabContent = document.querySelectorAll('.graphic__tab-content');
+
+for (let i = 0; i < graphicTab.length; i++) {
+
+    graphicTab[i].addEventListener('click', (e) => {
+        graphicTab[i].classList.add('active__tab');
+        graphicTabContent[i].classList.add('active__tab-content');
+        for (let j = 0; j < graphicTab.length; j++) {
+            if (graphicTab[i] == graphicTab[j]) {
+                continue;
+            } else {
+                graphicTab[j].classList.remove('active__tab');
+                graphicTabContent[j].classList.remove('active__tab-content');
+            }
+        }
+    })
+
+}
+
+
+// graphicTabs.classList.add('active__tab');
+
+
+
+
+
+
+
 
 
 /*<div class="integration__card">
